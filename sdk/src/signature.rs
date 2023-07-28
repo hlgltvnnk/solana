@@ -38,7 +38,7 @@ impl Signature {
     }
 
     pub fn new_unique() -> Self {
-        Self::from(std::array::from_fn(|_| rand::random()))
+        Self::from(std::array::from_fn(|_| rand_07::random()))
     }
 
     pub(self) fn verify_verbose(

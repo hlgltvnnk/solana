@@ -163,6 +163,7 @@ pub fn bytes_are_curve_point<T: AsRef<[u8]>>(_bytes: T) -> bool {
     #[cfg(not(target_os = "solana"))]
     {
         curve25519_dalek::edwards::CompressedEdwardsY::from_slice(_bytes.as_ref())
+            .expect("Slice does not have a length of 32")
             .decompress()
             .is_some()
     }

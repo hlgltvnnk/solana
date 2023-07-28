@@ -25,7 +25,7 @@ full = [
     "chrono",
     "generic-array",
     "memmap2",
-    "rand",
+    "rand_07",
     "rand_chacha",
     "serde_json",
     "ed25519-dalek",
@@ -64,7 +64,7 @@ num-traits = { workspace = true }
 num_enum = { workspace = true }
 pbkdf2 = { workspace = true }
 qstring = { workspace = true }
-rand = { workspace = true, optional = true }
+rand_07 = { workspace = true, optional = true }
 rand_chacha = { workspace = true, optional = true }
 rustversion = { workspace = true }
 serde = { workspace = true }

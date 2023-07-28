@@ -5,7 +5,7 @@ pub use solana_program::pubkey::*;
 /// New random Pubkey for tests and benchmarks.
 #[cfg(feature = "full")]
 pub fn new_rand() -> Pubkey {
-    Pubkey::from(rand::random::<[u8; PUBKEY_BYTES]>())
+    Pubkey::from(rand_07::random::<[u8; PUBKEY_BYTES]>())
 }
 
 #[cfg(feature = "full")]
