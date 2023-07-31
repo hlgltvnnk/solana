@@ -28,10 +28,10 @@ getrandom = { workspace = true, features = ["dummy"] }
 itertools = { workspace = true }
 lazy_static = { workspace = true }
 merlin = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
-sha3 = "0.9"
+sha3 = { version = "0.10", default-features = false }
 solana-sdk = { workspace = true }
 subtle = { workspace = true }
 thiserror = { workspace = true }

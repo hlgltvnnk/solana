@@ -639,7 +639,6 @@ version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4152116fd6e9dadb291ae18fc1ec3575ed6d84c29642d97890f4b4a3417297e4"
 dependencies = [
- "block-padding",
  "generic-array",
 ]
 
@@ -651,12 +650,6 @@ checksum = "3078c7629b62d3f0439517fa394996acacc5cbc91c5a20d8c658e77abd503a71"
 dependencies = [
  "generic-array",
 ]
-
-[[package]]
-name = "block-padding"
-version = "0.2.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8d696c370c750c948ada61c69a0ee2cbbb9c50b1019ddb86d9317157a99c2cae"
 
 [[package]]
 name = "borsh"
@@ -4842,18 +4835,6 @@ dependencies = [
 
 [[package]]
 name = "sha3"
-version = "0.9.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f81199417d4e5de3f04b1e871023acea7389672c4135918f05aa9cbf2f2fa809"
-dependencies = [
- "block-buffer 0.9.0",
- "digest 0.9.0",
- "keccak",
- "opaque-debug",
-]
-
-[[package]]
-name = "sha3"
 version = "0.10.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "75872d278a8f37ef87fa0ddbda7802605cb18344497949862c0d4dcb291eba60"
@@ -5038,7 +5019,7 @@ version = "1.17.0"
 dependencies = [
  "clap 2.34.0",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "solana-account-decoder",
  "solana-clap-utils",
@@ -5098,7 +5079,7 @@ dependencies = [
  "clap 3.2.25",
  "crossbeam-channel",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "solana-client",
  "solana-core",
@@ -5176,7 +5157,7 @@ dependencies = [
  "clap 2.34.0",
  "crossbeam-channel",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "serde_json",
  "serde_yaml 0.9.25",
@@ -5217,7 +5198,7 @@ dependencies = [
  "bv",
  "fnv",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "rustc_version",
  "serde",
@@ -5236,7 +5217,7 @@ dependencies = [
  "libsecp256k1",
  "log",
  "memoffset 0.9.0",
- "rand 0.8.5",
+ "rand 0.7.3",
  "solana-measure",
  "solana-program-runtime",
  "solana-sdk",
@@ -5266,7 +5247,7 @@ dependencies = [
  "memmap2",
  "modular-bitfield",
  "num_enum 0.6.1",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "solana-logger",
  "solana-measure",
@@ -5463,8 +5444,8 @@ dependencies = [
  "indicatif",
  "log",
  "quinn",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rayon",
  "solana-connection-cache",
  "solana-measure",
@@ -5543,8 +5524,8 @@ dependencies = [
  "indexmap 2.0.0",
  "indicatif",
  "log",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rayon",
  "rcgen",
  "solana-logger",
@@ -5579,8 +5560,8 @@ dependencies = [
  "min-max-heap",
  "num_enum 0.6.1",
  "quinn",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "raptorq",
  "rayon",
  "rolling-file",
@@ -5668,7 +5649,7 @@ dependencies = [
  "crossbeam-channel",
  "itertools",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "serde",
  "solana-bench-tps",
  "solana-client",
@@ -5707,7 +5688,7 @@ version = "1.17.0"
 dependencies = [
  "assert_matches",
  "ed25519-dalek",
- "rand 0.8.5",
+ "rand 0.7.3",
  "solana-program-test",
  "solana-sdk",
 ]
@@ -5722,7 +5703,7 @@ dependencies = [
  "lazy_static",
  "log",
  "matches",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "serde",
  "solana-logger",
@@ -5883,8 +5864,8 @@ dependencies = [
  "matches",
  "num-traits",
  "num_cpus",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rayon",
  "regex",
  "rustc_version",
@@ -5992,8 +5973,8 @@ dependencies = [
  "num_cpus",
  "num_enum 0.6.1",
  "prost 0.11.9",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rayon",
  "reed-solomon-erasure",
  "rocksdb",
@@ -6088,7 +6069,7 @@ version = "1.17.0"
 dependencies = [
  "bincode",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "solana-measure",
  "solana-program-runtime",
  "solana-sdk",
@@ -6105,7 +6086,7 @@ dependencies = [
  "gag",
  "itertools",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "serial_test",
  "solana-client",
@@ -6196,7 +6177,7 @@ dependencies = [
  "gethostname",
  "lazy_static",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "reqwest",
  "serial_test",
  "solana-sdk",
@@ -6207,7 +6188,7 @@ name = "solana-net-shaper"
 version = "1.17.0"
 dependencies = [
  "clap 3.2.25",
- "rand 0.8.5",
+ "rand 0.7.3",
  "serde",
  "serde_json",
  "solana-logger",
@@ -6222,7 +6203,7 @@ dependencies = [
  "crossbeam-channel",
  "log",
  "nix",
- "rand 0.8.5",
+ "rand 0.7.3",
  "serde",
  "serde_derive",
  "socket2 0.5.3",
@@ -6259,7 +6240,7 @@ dependencies = [
  "log",
  "matches",
  "nix",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rand_chacha 0.2.2",
  "rayon",
  "serde",
@@ -6280,7 +6261,7 @@ dependencies = [
  "crossbeam-channel",
  "log",
  "matches",
- "rand 0.8.5",
+ "rand 0.7.3",
  "solana-entry",
  "solana-ledger",
  "solana-logger",
@@ -6298,7 +6279,7 @@ version = "1.17.0"
 dependencies = [
  "clap 3.2.25",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "solana-entry",
  "solana-logger",
@@ -6343,8 +6324,8 @@ dependencies = [
  "num-derive",
  "num-traits",
  "parking_lot 0.12.1",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rustc_version",
  "rustversion",
  "serde",
@@ -6352,7 +6333,7 @@ dependencies = [
  "serde_derive",
  "serde_json",
  "sha2 0.10.7",
- "sha3 0.10.8",
+ "sha3",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-logger",
@@ -6379,7 +6360,7 @@ dependencies = [
  "num-derive",
  "num-traits",
  "percentage",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rustc_version",
  "serde",
  "solana-frozen-abi",
@@ -6683,8 +6664,8 @@ dependencies = [
  "once_cell",
  "ouroboros",
  "percentage",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rayon",
  "regex",
  "rustc_version",
@@ -6757,7 +6738,7 @@ dependencies = [
  "pbkdf2 0.11.0",
  "qstring",
  "rand 0.7.3",
- "rand_chacha 0.3.1",
+ "rand_chacha 0.2.2",
  "rustc_version",
  "rustversion",
  "serde",
@@ -6766,7 +6747,7 @@ dependencies = [
  "serde_json",
  "serde_with",
  "sha2 0.10.7",
- "sha3 0.10.8",
+ "sha3",
  "solana-frozen-abi",
  "solana-frozen-abi-macro",
  "solana-logger",
@@ -6917,7 +6898,7 @@ dependencies = [
  "pkcs8",
  "quinn",
  "quinn-proto",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rcgen",
  "rustls 0.21.5",
  "solana-logger",
@@ -7028,8 +7009,8 @@ dependencies = [
  "indexmap 2.0.0",
  "indicatif",
  "log",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rayon",
  "solana-connection-cache",
  "solana-measure",
@@ -7049,7 +7030,7 @@ dependencies = [
  "bincode",
  "clap 2.34.0",
  "log",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "solana-clap-utils",
  "solana-cli",
@@ -7106,8 +7087,8 @@ dependencies = [
  "lru",
  "matches",
  "quinn",
- "rand 0.8.5",
- "rand_chacha 0.3.1",
+ "rand 0.7.3",
+ "rand_chacha 0.2.2",
  "rayon",
  "rcgen",
  "rustls 0.21.5",
@@ -7173,7 +7154,7 @@ dependencies = [
  "libloading",
  "log",
  "num_cpus",
- "rand 0.8.5",
+ "rand 0.7.3",
  "rayon",
  "serde",
  "serde_json",
@@ -7334,7 +7315,7 @@ dependencies = [
  "rand 0.8.5",
  "serde",
  "serde_json",
- "sha3 0.9.1",
+ "sha3",
  "solana-program",
  "solana-sdk",
  "subtle",

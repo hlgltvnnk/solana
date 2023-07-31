@@ -30,7 +30,7 @@ fn ristretto_point_from_optional_slice(
 ) -> Result<CompressedRistretto, ProofVerificationError> {
     optional_slice
         .and_then(|slice| (slice.len() == RISTRETTO_POINT_LEN).then_some(slice))
-        .map(CompressedRistretto::from_slice)
+        .and_then(|slice| CompressedRistretto::from_slice(slice).ok())
         .ok_or(ProofVerificationError::Deserialization)
 }
 
@@ -45,6 +45,6 @@ fn canonical_scalar_from_optional_slice(
     optional_slice
         .and_then(|slice| (slice.len() == SCALAR_LEN).then_some(slice)) // if chunk is the wrong length, convert to None
         .and_then(|slice| slice.try_into().ok()) // convert to array
-        .and_then(Scalar::from_canonical_bytes)
+        .and_then(|bytes| Option::from(Scalar::from_canonical_bytes(bytes)))
         .ok_or(ProofVerificationError::Deserialization)
 }

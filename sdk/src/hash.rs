@@ -9,7 +9,7 @@ pub use solana_program::hash::*;
 #[cfg(feature = "full")]
 pub fn new_rand<R: ?Sized>(rng: &mut R) -> Hash
 where
-    R: rand_07::Rng,
+    R: rand::Rng,
 {
     let mut buf = [0u8; HASH_BYTES];
     rng.fill(&mut buf);

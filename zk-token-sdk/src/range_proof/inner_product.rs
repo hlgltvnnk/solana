@@ -390,10 +390,12 @@ impl InnerProductProof {
         }
 
         let pos = 2 * lg_n * 32;
-        let a = Scalar::from_canonical_bytes(util::read32(&slice[pos..]))
+        let a = Option::from(Scalar::from_canonical_bytes(util::read32(&slice[pos..])))
             .ok_or(ProofVerificationError::Deserialization)?;
-        let b = Scalar::from_canonical_bytes(util::read32(&slice[pos + 32..]))
-            .ok_or(ProofVerificationError::Deserialization)?;
+        let b = Option::from(Scalar::from_canonical_bytes(util::read32(
+            &slice[pos + 32..],
+        )))
+        .ok_or(ProofVerificationError::Deserialization)?;
 
         Ok(InnerProductProof { L_vec, R_vec, a, b })
     }
@@ -421,7 +423,7 @@ mod tests {
         let b: Vec<_> = (0..n).map(|_| Scalar::random(&mut OsRng)).collect();
         let c = util::inner_product(&a, &b);
 
-        let G_factors: Vec<Scalar> = iter::repeat(Scalar::one()).take(n).collect();
+        let G_factors: Vec<Scalar> = iter::repeat(Scalar::ONE).take(n).collect();
 
         let y_inv = Scalar::random(&mut OsRng);
         let H_factors: Vec<Scalar> = util::exp_iter(y_inv).take(n).collect();
@@ -457,7 +459,7 @@ mod tests {
         assert!(proof
             .verify(
                 n,
-                iter::repeat(Scalar::one()).take(n),
+                iter::repeat(Scalar::ONE).take(n),
                 util::exp_iter(y_inv).take(n),
                 &P,
                 &Q,
@@ -472,7 +474,7 @@ mod tests {
         assert!(proof
             .verify(
                 n,
-                iter::repeat(Scalar::one()).take(n),
+                iter::repeat(Scalar::ONE).take(n),
                 util::exp_iter(y_inv).take(n),
                 &P,
                 &Q,

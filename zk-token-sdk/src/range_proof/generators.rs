@@ -3,7 +3,7 @@ use {
         digest::{ExtendableOutput, Update, XofReader},
         ristretto::RistrettoPoint,
     },
-    sha3::{Sha3XofReader, Shake256},
+    sha3::{Shake256, Shake256Reader},
 };
 
 /// Generators for Pedersen vector commitments.
@@ -11,7 +11,7 @@ use {
 /// The code is copied from https://github.com/dalek-cryptography/bulletproofs for now...
 
 struct GeneratorsChain {
-    reader: Sha3XofReader,
+    reader: Shake256Reader,
 }
 
 impl GeneratorsChain {
