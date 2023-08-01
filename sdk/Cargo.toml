@@ -28,7 +28,7 @@ full = [
     "rand_chacha",
     "serde_json",
     "ed25519-dalek",
-    "ed25519-dalek-bip32",
+    # "ed25519-dalek-bip32",
     "solana-logger",
     "libsecp256k1",
     "sha3",
@@ -50,7 +50,7 @@ curve25519-dalek = { workspace = true, optional = true }
 derivation-path = { workspace = true }
 digest = { workspace = true, optional = true }
 ed25519-dalek = { workspace = true, optional = true }
-ed25519-dalek-bip32 = { workspace = true, optional = true }
+# ed25519-dalek-bip32 = { workspace = true, optional = true }
 generic-array = { workspace = true, features = ["serde", "more_lengths"], optional = true }
 hmac = { workspace = true }
 itertools =  { workspace = true }
@@ -63,7 +63,7 @@ num-traits = { workspace = true }
 num_enum = { workspace = true }
 pbkdf2 = { workspace = true }
 qstring = { workspace = true }
-rand = "0.7" 
+rand = "0.8"  
 rand_chacha = { workspace = true, optional = true }
 rustversion = { workspace = true }
 serde = { workspace = true }

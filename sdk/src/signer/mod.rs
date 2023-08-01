@@ -20,6 +20,7 @@ use {
     thiserror::Error,
 };
 
+pub mod bip32_keypair_generator;
 pub mod keypair;
 pub mod null_signer;
 pub mod presigner;
