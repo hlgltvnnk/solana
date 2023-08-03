@@ -16,7 +16,7 @@ futures-util = { workspace = true }
 indexmap = { workspace = true }
 indicatif = { workspace = true, optional = true }
 log = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 rayon = { workspace = true }
 rcgen = { workspace = true }
 solana-measure = { workspace = true }

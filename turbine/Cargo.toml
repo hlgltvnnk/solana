@@ -18,8 +18,8 @@ itertools = { workspace = true }
 log = { workspace = true }
 lru = { workspace = true }
 quinn = { workspace = true }
-rand = "0.7" 
-rand_chacha = "0.2.1"
+rand = "0.8" 
+rand_chacha = "0.3.1"
 rayon = { workspace = true }
 rcgen = { workspace = true }
 rustls = { workspace = true }

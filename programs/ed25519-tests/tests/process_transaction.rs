@@ -17,7 +17,7 @@ async fn test_success() {
     let payer = &context.payer;
     let recent_blockhash = context.last_blockhash;
 
-    let privkey = ed25519_dalek::Keypair::generate(&mut thread_rng());
+    let privkey = ed25519_dalek::SigningKey::generate(&mut thread_rng());
     let message_arr = b"hello";
     let instruction = new_ed25519_instruction(&privkey, message_arr);
 

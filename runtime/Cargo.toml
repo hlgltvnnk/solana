@@ -39,7 +39,7 @@ num_enum = { workspace = true }
 once_cell = { workspace = true }
 ouroboros = { workspace = true }
 percentage = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 rayon = { workspace = true }
 regex = { workspace = true }
 serde = { workspace = true, features = ["rc"] }
@@ -83,7 +83,7 @@ assert_matches = { workspace = true }
 ed25519-dalek = { workspace = true }
 libsecp256k1 = { workspace = true }
 memoffset = { workspace = true }
-rand_chacha = { workspace = true }
+rand_chacha = "0.3.1"
 solana-logger = { workspace = true }
 solana-sdk = { workspace = true, features = ["dev-context-only-utils"] }
 static_assertions = { workspace = true }

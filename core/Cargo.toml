@@ -31,8 +31,8 @@ lru = { workspace = true }
 min-max-heap = { workspace = true }
 num_enum = { workspace = true }
 quinn = { workspace = true }
-rand = { workspace = true }
-rand_chacha = { workspace = true }
+rand = "0.8"
+rand_chacha = "0.3.1"
 rayon = { workspace = true }
 rolling-file = { workspace = true }
 serde = { workspace = true }

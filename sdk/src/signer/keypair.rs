@@ -63,10 +63,11 @@ impl Keypair {
     pub fn to_base58_string(&self) -> String {
         bs58::encode(&self.0.to_bytes()).into_string()
     }
+    // Q: how to return &[u8; 32]
 
     /// Gets this `Keypair`'s SecretKey
-    pub fn secret(&self) -> &ed25519_dalek::SecretKey {
-        &self.0.to_bytes()
+    pub fn secret(&self) -> ed25519_dalek::SecretKey {
+        self.0.to_bytes().clone()
     }
 
     /// Allows Keypair cloning
@@ -77,11 +78,7 @@ impl Keypair {
     /// Only use this in tests or when strictly required. Consider using [`std::sync::Arc<Keypair>`]
     /// instead.
     pub fn insecure_clone(&self) -> Self {
-        Self(ed25519_dalek::SigningKey {
-            // This will never error since self is a valid keypair
-            secret_key: self.0.to_bytes(),
-            verifying_key: self.0.verifying_key(),
-        })
+        Self(self.0.clone())
     }
 }
 
@@ -227,11 +224,9 @@ fn bip32_derived_keypair(
         .and_then(|extended| extended.derive(&derivation_path))
         .map_err(|err| err.to_string())?;
 
-    let extended_public_key = extended.public_key();
-    Ok(Keypair(ed25519_dalek::SigningKey {
-        secret_key: extended.secret_key,
-        verifying_key: extended_public_key,
-    }))
+    Ok(Keypair(ed25519_dalek::SigningKey::from_bytes(
+        &extended.secret_key,
+    )))
 }
 
 pub fn generate_seed_from_seed_phrase_and_passphrase(

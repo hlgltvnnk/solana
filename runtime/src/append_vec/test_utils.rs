@@ -23,10 +23,14 @@ pub fn get_append_vec_dir() -> String {
 
 pub fn get_append_vec_path(path: &str) -> TempFile {
     let out_dir = get_append_vec_dir();
-    let rand_string: String = rand::thread_rng()
-        .sample_iter(&Alphanumeric)
-        .take(30)
-        .collect();
+    let rand_string: String = String::from_utf8(
+        rand::thread_rng()
+            .sample_iter(&Alphanumeric)
+            .take(30)
+            .collect(),
+    )
+    .expect("Invalid bytes");
+
     let dir = format!("{out_dir}/{rand_string}");
     let mut buf = PathBuf::new();
     buf.push(format!("{dir}/{path}"));

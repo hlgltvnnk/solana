@@ -13,7 +13,7 @@ edition = { workspace = true }
 bv = { workspace = true, features = ["serde"] }
 fnv = { workspace = true }
 log = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 rayon = { workspace = true }
 serde = { workspace = true, features = ["rc"] }
 serde_derive = { workspace = true }

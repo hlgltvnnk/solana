@@ -28,8 +28,8 @@ lru = { workspace = true }
 num_cpus = { workspace = true }
 num_enum = { workspace = true }
 prost = { workspace = true }
-rand = { workspace = true }
-rand_chacha = { workspace = true }
+rand = "0.8"
+rand_chacha = "0.3.1"
 rayon = { workspace = true }
 reed-solomon-erasure = { workspace = true, features = ["simd-accel"] }
 scopeguard = { workspace = true }

@@ -4,10 +4,7 @@
 //! token-2022 where the plaintext is always `u64`.
 #[cfg(not(target_os = "solana"))]
 use {
-    aes_gcm_siv::{
-        aead::{Aead, NewAead},
-        Aes128GcmSiv,
-    },
+    aes_gcm_siv::{aead::Aead, Aes128GcmSiv, KeyInit},
     rand::{rngs::OsRng, Rng},
     thiserror::Error,
 };

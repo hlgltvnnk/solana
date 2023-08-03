@@ -1996,7 +1996,7 @@ fn backup_and_clear_blockstore(
                 .ledger_column_options
                 .shred_storage_type
                 .blockstore_directory(),
-            thread_rng().gen_range(0, 99999)
+            thread_rng().gen_range(0..99999)
         );
         let backup_blockstore = Blockstore::open_with_options(
             &ledger_path.join(folder_name),

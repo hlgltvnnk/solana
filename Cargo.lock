@@ -528,12 +528,6 @@ dependencies = [
 
 [[package]]
 name = "base64"
-version = "0.12.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3441f0f7b02788e948e47f457ca01f1d7e6d92c693bc132c22b087d3141c03ff"
-
-[[package]]
-name = "base64"
 version = "0.13.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9e1b586273c5702936fe7b7d6896644d8be71e6314cfe09d3167c95f712589e8"
@@ -2828,18 +2822,18 @@ dependencies = [
 
 [[package]]
 name = "libsecp256k1"
-version = "0.6.0"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c9d220bc1feda2ac231cb78c3d26f27676b8cf82c96971f7aeef3d0cf2797c73"
+checksum = "95b09eff1b35ed3b33b877ced3a691fc7a481919c7e29c53c906226fcf55e2a1"
 dependencies = [
  "arrayref",
- "base64 0.12.3",
+ "base64 0.13.1",
  "digest 0.9.0",
  "hmac-drbg",
  "libsecp256k1-core",
  "libsecp256k1-gen-ecmult",
  "libsecp256k1-gen-genmult",
- "rand 0.7.3",
+ "rand 0.8.5",
  "serde",
  "sha2 0.9.9",
  "typenum",
@@ -2847,9 +2841,9 @@ dependencies = [
 
 [[package]]
 name = "libsecp256k1-core"
-version = "0.2.2"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d0f6ab710cec28cef759c5f18671a27dae2a5f952cdaaee1d8e2908cb2478a80"
+checksum = "5be9b9bb642d8522a44d533eab56c16c738301965504753b03ad1de3425d5451"
 dependencies = [
  "crunchy",
  "digest 0.9.0",
@@ -2858,18 +2852,18 @@ dependencies = [
 
 [[package]]
 name = "libsecp256k1-gen-ecmult"
-version = "0.2.1"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ccab96b584d38fac86a83f07e659f0deafd0253dc096dab5a36d53efe653c5c3"
+checksum = "3038c808c55c87e8a172643a7d87187fc6c4174468159cb3090659d55bcb4809"
 dependencies = [
  "libsecp256k1-core",
 ]
 
 [[package]]
 name = "libsecp256k1-gen-genmult"
-version = "0.2.1"
+version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "67abfe149395e3aa1c48a2beb32b068e2334402df8181f818d3aee2b304c4f5d"
+checksum = "3db8d6ba2cec9eacc40e6e8ccc98931840301f1006e95647ceb2dd5c3aa06f7c"
 dependencies = [
  "libsecp256k1-core",
 ]
@@ -5217,7 +5211,7 @@ dependencies = [
  "bv",
  "fnv",
  "log",
- "rand 0.7.3",
+ "rand 0.8.5",
  "rayon",
  "rustc_version",
  "serde",
@@ -5266,7 +5260,7 @@ dependencies = [
  "memmap2",
  "modular-bitfield",
  "num_enum 0.6.1",
- "rand 0.7.3",
+ "rand 0.8.5",
  "rayon",
  "solana-logger",
  "solana-measure",
@@ -5543,7 +5537,7 @@ dependencies = [
  "indexmap 2.0.0",
  "indicatif",
  "log",
- "rand 0.7.3",
+ "rand 0.8.5",
  "rand_chacha 0.2.2",
  "rayon",
  "rcgen",
@@ -5579,8 +5573,8 @@ dependencies = [
  "min-max-heap",
  "num_enum 0.6.1",
  "quinn",
- "rand 0.7.3",
- "rand_chacha 0.2.2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
  "raptorq",
  "rayon",
  "rolling-file",
@@ -5707,7 +5701,7 @@ version = "1.17.0"
 dependencies = [
  "assert_matches",
  "ed25519-dalek",
- "rand 0.7.3",
+ "rand 0.8.5",
  "solana-program-test",
  "solana-sdk",
 ]
@@ -5883,8 +5877,8 @@ dependencies = [
  "matches",
  "num-traits",
  "num_cpus",
- "rand 0.7.3",
- "rand_chacha 0.2.2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
  "rayon",
  "regex",
  "rustc_version",
@@ -5992,8 +5986,8 @@ dependencies = [
  "num_cpus",
  "num_enum 0.6.1",
  "prost 0.11.9",
- "rand 0.7.3",
- "rand_chacha 0.2.2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
  "rayon",
  "reed-solomon-erasure",
  "rocksdb",
@@ -6259,8 +6253,8 @@ dependencies = [
  "log",
  "matches",
  "nix",
- "rand 0.7.3",
- "rand_chacha 0.2.2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
  "rayon",
  "serde",
  "solana-logger",
@@ -6379,7 +6373,7 @@ dependencies = [
  "num-derive",
  "num-traits",
  "percentage",
- "rand 0.7.3",
+ "rand 0.8.5",
  "rustc_version",
  "serde",
  "solana-frozen-abi",
@@ -6683,8 +6677,8 @@ dependencies = [
  "once_cell",
  "ouroboros",
  "percentage",
- "rand 0.7.3",
- "rand_chacha 0.2.2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
  "rayon",
  "regex",
  "rustc_version",
@@ -7105,8 +7099,8 @@ dependencies = [
  "lru",
  "matches",
  "quinn",
- "rand 0.7.3",
- "rand_chacha 0.2.2",
+ "rand 0.8.5",
+ "rand_chacha 0.3.1",
  "rayon",
  "rcgen",
  "rustls 0.21.5",

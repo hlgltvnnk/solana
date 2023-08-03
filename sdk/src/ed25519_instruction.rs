@@ -31,7 +31,8 @@ pub struct Ed25519SignatureOffsets {
 
 pub fn new_ed25519_instruction(keypair: &ed25519_dalek::SigningKey, message: &[u8]) -> Instruction {
     let signature = keypair.sign(message).to_bytes();
-    let pubkey = keypair.verifying_key().as_bytes().as_slice();
+    let binding = keypair.verifying_key();
+    let pubkey = binding.as_bytes().as_slice();
 
     assert_eq!(pubkey.len(), PUBKEY_SERIALIZED_SIZE);
     assert_eq!(signature.len(), SIGNATURE_SERIALIZED_SIZE);
@@ -369,7 +370,7 @@ pub mod test {
         assert!(tx.verify_precompiles(&feature_set).is_ok());
 
         let index = loop {
-            let index = thread_rng().gen_range(0, instruction.data.len());
+            let index = thread_rng().gen_range(0..instruction.data.len());
             // byte 1 is not used, so this would not cause the verify to fail
             if index != 1 {
                 break index;
