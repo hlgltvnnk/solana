@@ -25,7 +25,7 @@ percentage = { workspace = true }
 pkcs8 = { workspace = true, features = ["alloc"] }
 quinn = { workspace = true }
 quinn-proto = { workspace = true }
-rand = { workspace = true }
+rand = "0.7"
 rcgen = { workspace = true }
 rustls = { workspace = true, features = ["dangerous_configuration"] }
 solana-metrics = { workspace = true }

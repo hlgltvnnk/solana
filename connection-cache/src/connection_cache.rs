@@ -532,10 +532,10 @@ mod tests {
     }
 
     fn get_addr(rng: &mut ChaChaRng) -> SocketAddr {
-        let a = rng.gen_range(1, 255);
-        let b = rng.gen_range(1, 255);
-        let c = rng.gen_range(1, 255);
-        let d = rng.gen_range(1, 255);
+        let a = rng.gen_range(1..255);
+        let b = rng.gen_range(1..255);
+        let c = rng.gen_range(1..255);
+        let d = rng.gen_range(1..255);
 
         let addr_str = format!("{a}.{b}.{c}.{d}:80");
 

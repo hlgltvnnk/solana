@@ -11,7 +11,7 @@ edition = { workspace = true }
 [dependencies]
 clap = { workspace = true }
 log = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 rayon = { workspace = true }
 solana-account-decoder = { workspace = true }
 solana-clap-utils = { workspace = true }

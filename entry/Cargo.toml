@@ -15,7 +15,7 @@ crossbeam-channel = { workspace = true }
 dlopen2 = { workspace = true }
 lazy_static = { workspace = true }
 log = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 rayon = { workspace = true }
 serde = { workspace = true }
 solana-measure = { workspace = true }

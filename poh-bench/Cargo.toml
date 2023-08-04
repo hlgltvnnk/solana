@@ -12,7 +12,7 @@ edition = { workspace = true }
 [dependencies]
 clap = { version = "3.1.5", features = ["cargo"] }
 log = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 rayon = { workspace = true }
 solana-entry = { workspace = true }
 solana-logger = { workspace = true }

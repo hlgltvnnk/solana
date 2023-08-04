@@ -13,7 +13,7 @@ edition = { workspace = true }
 crossbeam-channel = { workspace = true }
 itertools = { workspace = true }
 log = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 rayon = { workspace = true }
 solana-client = { workspace = true }
 solana-config-program = { workspace = true }

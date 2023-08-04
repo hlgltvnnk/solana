@@ -180,7 +180,6 @@ where
 mod tests {
     use {
         super::*,
-        rand::SeedableRng,
         rand_chacha::{rand_core::SeedableRng, ChaChaRng},
         std::{convert::TryInto, iter::repeat_with},
     };

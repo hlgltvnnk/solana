@@ -878,7 +878,7 @@ mod test {
         let mut rng = ChaChaRng::from_seed(seed);
         let keys: Vec<_> = repeat_with(Keypair::new).take(16).collect();
         let values: Vec<_> = repeat_with(|| {
-            let index = rng.gen_range(0, keys.len());
+            let index = rng.gen_range(0..keys.len());
             CrdsValue::new_rand(&mut rng, Some(&keys[index]))
         })
         .take(1 << 12)

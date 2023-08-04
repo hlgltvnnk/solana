@@ -15,7 +15,7 @@ clap = { version = "3.1.5", features = ["cargo"] }
 crossbeam-channel = { workspace = true }
 log = { workspace = true }
 nix = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 serde = { workspace = true }
 serde_derive = { workspace = true }
 socket2 = { workspace = true }

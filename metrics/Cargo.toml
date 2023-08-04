@@ -19,7 +19,7 @@ solana-sdk = { workspace = true }
 
 [dev-dependencies]
 env_logger = { workspace = true }
-rand = { workspace = true }
+rand = "0.8"
 serial_test = { workspace = true }
 
 [lib]
