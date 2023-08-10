@@ -3,12 +3,12 @@ name = "solana-program"
 description = "Solana Program"
 documentation = "https://docs.rs/solana-program"
 readme = "README.md"
-version = { workspace = true }
-authors = { workspace = true }
-repository = { workspace = true }
-homepage = { workspace = true }
-license = { workspace = true }
-edition = { workspace = true }
+version = "1.17.0"
+authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
+repository = "https://github.com/solana-labs/solana"
+homepage = "https://solanalabs.com/"
+license = "Apache-2.0"
+edition = "2021"
 rust-version = "1.68.0" # solana platform-tools rust version
 
 [dependencies]

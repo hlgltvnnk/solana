@@ -8,12 +8,12 @@ The tool currently supports two types of encryption keys that are used in the SP
   - AES128 key that can be used for an authenticated symmetric encryption (e.g. AES-GCM-SIV)
 """
 publish = false
-version = { workspace = true }
-authors = { workspace = true }
-repository = { workspace = true }
-homepage = { workspace = true }
-license = { workspace = true }
-edition = { workspace = true }
+version = "1.17.0"
+authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
+repository = "https://github.com/solana-labs/solana"
+homepage = "https://solanalabs.com/"
+license = "Apache-2.0"
+edition = "2021"
 
 [dependencies]
 bs58 = { workspace = true }

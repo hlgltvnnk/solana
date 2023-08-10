@@ -3,12 +3,12 @@ name = "solana-rayon-threadlimit"
 description = "solana-rayon-threadlimit"
 documentation = "https://docs.rs/solana-rayon-threadlimit"
 readme = "../README.md"
-version = { workspace = true }
-authors = { workspace = true }
-repository = { workspace = true }
-homepage = { workspace = true }
-license = { workspace = true }
-edition = { workspace = true }
+version = "1.17.0"
+authors = ["Solana Labs Maintainers <maintainers@solanalabs.com>"]
+repository = "https://github.com/solana-labs/solana"
+homepage = "https://solanalabs.com/"
+license = "Apache-2.0"
+edition = "2021"
 
 [dependencies]
 lazy_static = { workspace = true }
