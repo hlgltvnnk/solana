@@ -158,11 +158,10 @@ impl EncodableKeypair for Keypair {
 pub fn read_keypair<R: Read>(reader: &mut R) -> Result<Keypair, Box<dyn error::Error>> {
     let bytes: Vec<u8> = serde_json::from_reader(reader)?;
 
-    let mut byte_array: [u8; ed25519_dalek::SECRET_KEY_LENGTH] =
-        [0u8; ed25519_dalek::SECRET_KEY_LENGTH];
+    let mut byte_array: [u8; ed25519_dalek::KEYPAIR_LENGTH] = [0u8; ed25519_dalek::KEYPAIR_LENGTH];
     byte_array.copy_from_slice(&bytes);
 
-    let dalek_keypair = ed25519_dalek::SigningKey::from_bytes(&byte_array);
+    let dalek_keypair = ed25519_dalek::SigningKey::from_keypair_bytes(&byte_array)?;
     Ok(Keypair(dalek_keypair))
 }
 
