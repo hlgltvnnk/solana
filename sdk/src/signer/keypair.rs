@@ -42,11 +42,13 @@ impl Keypair {
 
     /// Recovers a `Keypair` from a byte array
     pub fn from_bytes(bytes: &[u8]) -> Result<Self, ed25519_dalek::SignatureError> {
-        let mut byte_array: [u8; ed25519_dalek::KEYPAIR_LENGTH] =
-            [0u8; ed25519_dalek::KEYPAIR_LENGTH];
+        let mut byte_array: [u8; ed25519_dalek::SECRET_KEY_LENGTH] =
+            [0u8; ed25519_dalek::SECRET_KEY_LENGTH];
 
         byte_array.copy_from_slice(&bytes);
-        ed25519_dalek::SigningKey::from_keypair_bytes(&byte_array).map(Self)
+
+        let dalek_keypair = ed25519_dalek::SigningKey::from_bytes(&byte_array);
+        Ok(Keypair(dalek_keypair))
     }
 
     /// Returns this `Keypair` as a byte array
