@@ -4,7 +4,7 @@
 //! [borsh]: https://borsh.io/
 use {
     borsh::{
-        maybestd::io::{Error, Write},
+        io::{Error, Write},
         schema::{BorshSchema, Declaration, Definition, Fields},
         BorshDeserialize, BorshSerialize,
     },
@@ -115,7 +115,7 @@ pub fn get_instance_packed_len<T: BorshSerialize>(instance: &T) -> Result<usize,
 mod tests {
     use {
         super::*,
-        borsh::{maybestd::io::ErrorKind, BorshSchema, BorshSerialize},
+        borsh::{io::ErrorKind, BorshSchema, BorshSerialize},
         std::{collections::HashMap, mem::size_of},
     };
 
