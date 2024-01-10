@@ -11,7 +11,7 @@ use {
         },
         stake_history::{StakeHistory, StakeHistoryEntry},
     },
-    borsh::{io, BorshDeserialize, BorshSchema, BorshSerialize},
+    borsh::{maybestd::io, BorshDeserialize, BorshSchema, BorshSerialize},
     std::collections::HashSet,
 };
 
